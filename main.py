@@ -14,7 +14,14 @@ def maker() :
   help_view = Toplevel(window)
   help_view.geometry("300x50")
   help_view.title("개발자")
-  lb = Label(help_view, text = "집 가고 싶다")
+  lb = Label(help_view, text = "Kang Min Su")
+  lb.pack()
+
+def makers_mind() :
+  help_view = Toplevel(window)
+  help_view.geometry("300x50")
+  help_view.title("개발자의 속마음")
+  lb = Label(help_view, text = "아 집 가고 싶다")
   lb.pack()
 
 window = Tk()
@@ -32,6 +39,7 @@ menu.add_cascade(label = "파일", menu = menu_1)
 
 menu_2 = Menu(menu, tearoff = 0)
 menu_2.add_command(label = "개발자", command = maker)
+menu_2.add_command(label = "개발자의 속마음", command = makers_mind)
 menu.add_cascade(label = "개발자", menu = menu_2)
 
 text_area = Text(window)
